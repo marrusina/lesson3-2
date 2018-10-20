@@ -70,25 +70,14 @@ public class FirstTest {
 
         waitForElementPresent(
                 By.xpath("//*[contains(@text,'Search…')]"),
-                "Cannot find error message",
+                "Cannot find Search",
                 5
         );
 
       }
       else
           {
-              waitForElementAndClick(
-                      By.id("org.wikipedia:id/search_close_btn"),
-                      "Cannot find X to cancel search",
-                      15
-              );
-              waitForElementAndSendKeys(
-                      By.xpath("//*[contains(@text,'Search…')]"),
-                      "Trololo",
-                      "Cannot find Java",
-                      10
-              );
-
+              Assert.fail("You are looser");
         }
     }
 
